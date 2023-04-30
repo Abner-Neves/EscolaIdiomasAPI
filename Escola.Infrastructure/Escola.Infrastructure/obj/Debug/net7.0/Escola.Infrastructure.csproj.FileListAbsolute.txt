@@ -1,0 +1,17 @@
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\bin\Debug\net7.0\Escola.Infrastructure.deps.json
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\bin\Debug\net7.0\Escola.Infrastructure.dll
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\bin\Debug\net7.0\Escola.Infrastructure.pdb
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\bin\Debug\net7.0\Escola.Domain.dll
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\bin\Debug\net7.0\Escola.Domain.pdb
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\obj\Debug\net7.0\Escola.Infrastructure.csproj.AssemblyReference.cache
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\obj\Debug\net7.0\Escola.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\obj\Debug\net7.0\Escola.Infrastructure.AssemblyInfoInputs.cache
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\obj\Debug\net7.0\Escola.Infrastructure.AssemblyInfo.cs
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\obj\Debug\net7.0\Escola.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\obj\Debug\net7.0\Escola.Infrastructure.csproj.CopyComplete
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\obj\Debug\net7.0\Escola.Infrastructure.dll
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\obj\Debug\net7.0\refint\Escola.Infrastructure.dll
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\obj\Debug\net7.0\Escola.Infrastructure.pdb
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\obj\Debug\net7.0\ref\Escola.Infrastructure.dll
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\bin\Debug\net7.0\Escola.Infrastructure.runtimeconfig.json
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Infrastructure\Escola.Infrastructure\obj\Debug\net7.0\Escola.Infrastructure.genruntimeconfig.cache

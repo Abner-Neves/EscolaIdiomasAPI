@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "FiB/1kq+/hZXdOMpVWD4T3ojenG9SgH9WdsH4v8tE2L+db788puXa47X/TdR2xOFoRE1GsjGO5fuskDtx+16hg==",
+  "success": true,
+  "projectFilePath": "E:\\Coding\\Processos Seletivos\\Marlin - Desenvolvedor .NET C# API\\EscolaIdiomasAPI\\Escola.Application\\Escola.Application\\Escola.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\abner\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\abner\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\abner\\.nuget\\packages\\fluentutils.automapper\\1.2.7\\fluentutils.automapper.1.2.7.nupkg.sha512",
+    "C:\\Users\\abner\\.nuget\\packages\\fluentutils.automapper.extensions.microsoft.dependencyinjection\\1.2.7\\fluentutils.automapper.extensions.microsoft.dependencyinjection.1.2.7.nupkg.sha512",
+    "C:\\Users\\abner\\.nuget\\packages\\jetbrains.annotations\\2022.3.1\\jetbrains.annotations.2022.3.1.nupkg.sha512",
+    "C:\\Users\\abner\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\abner\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\abner\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\abner\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\abner\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

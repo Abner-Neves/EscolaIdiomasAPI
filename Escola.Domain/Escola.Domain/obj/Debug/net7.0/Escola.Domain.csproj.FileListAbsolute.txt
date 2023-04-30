@@ -1,0 +1,12 @@
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Domain\Escola.Domain\bin\Debug\net7.0\Escola.Domain.deps.json
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Domain\Escola.Domain\bin\Debug\net7.0\Escola.Domain.dll
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Domain\Escola.Domain\bin\Debug\net7.0\Escola.Domain.pdb
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Domain\Escola.Domain\obj\Debug\net7.0\Escola.Domain.csproj.AssemblyReference.cache
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Domain\Escola.Domain\obj\Debug\net7.0\Escola.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Domain\Escola.Domain\obj\Debug\net7.0\Escola.Domain.AssemblyInfoInputs.cache
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Domain\Escola.Domain\obj\Debug\net7.0\Escola.Domain.AssemblyInfo.cs
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Domain\Escola.Domain\obj\Debug\net7.0\Escola.Domain.csproj.CoreCompileInputs.cache
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Domain\Escola.Domain\obj\Debug\net7.0\Escola.Domain.dll
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Domain\Escola.Domain\obj\Debug\net7.0\refint\Escola.Domain.dll
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Domain\Escola.Domain\obj\Debug\net7.0\Escola.Domain.pdb
+E:\Coding\Processos Seletivos\Marlin - Desenvolvedor .NET C# API\EscolaIdiomasAPI\Escola.Domain\Escola.Domain\obj\Debug\net7.0\ref\Escola.Domain.dll
