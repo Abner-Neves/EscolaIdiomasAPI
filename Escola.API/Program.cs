@@ -1,6 +1,7 @@
 using Escola.Application;
 using Escola.Domain.Interfaces.Applications;
 using Escola.Domain.Interfaces.Repositories;
+using Escola.Domain.Models;
 using Escola.Infrastructure.Data;
 using Escola.Infrastructure.Repositories;
 
@@ -12,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IAlunoApplication, AlunoApplication>();
 builder.Services.AddTransient<IAlunoRepository, AlunoRepository>();
-builder.Services.AddAutoMapper(typeof(Program).Assembly);
+builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
 var app = builder.Build();
 

@@ -1,15 +1,15 @@
-﻿using System;
+﻿using Escola.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Diagnostics.CodeAnalysis;
 
-namespace Escola.Domain.Models
+namespace Escola.Domain.DTOs
 {
-    public class Aluno
+    public class GetAlunoDto
     {
         [Key]
         public int Id { get; set; }
@@ -19,9 +19,7 @@ namespace Escola.Domain.Models
         public string Cpf { get; set; }
         [Required]
         public string Email { get; set; }
-
-        [ForeignKey("Turma")]
+        [Required]
         public int TurmaId { get; set; }
-        public Turma? Turma { get; set; }
     }
 }
