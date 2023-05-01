@@ -17,6 +17,7 @@ builder.Services.AddTransient<IAlunoRepository, AlunoRepository>();
 builder.Services.AddTransient<ITurmaApplication, TurmaApplication>();
 builder.Services.AddTransient<ITurmaRepository, TurmaRepository>();
 builder.Services.AddTransient<IAlunoTurmaRepository, AlunoTurmaRepository>();
+builder.Services.AddTransient<IAlunoTurmaApplication, AlunoTurmaApplication>();
 builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
 var app = builder.Build();

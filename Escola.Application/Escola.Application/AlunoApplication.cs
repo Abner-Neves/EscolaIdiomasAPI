@@ -79,6 +79,7 @@ namespace Escola.Application
             if (await CpfExistente(alunoDto.Cpf, id))
                 throw new Exception("CPF informado já existe");
 
+            alunoDto.Cpf = FormatarCpf(alunoDto.Cpf);
             var aluno = _mapper.Map<Aluno>(alunoDto);
             aluno.Id = id;
             var result = await _alunoRepository.UpdateAluno(aluno);

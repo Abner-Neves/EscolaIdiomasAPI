@@ -24,6 +24,7 @@ namespace Escola.Domain.Models
             CreateMap<Turma, UpdateTurmaDto>().ReverseMap();
 
             CreateMap<AlunoTurma, InsertAlunoTurmaDto>().ReverseMap();
+            CreateMap<AlunoTurma, GetAlunoTurmaDto>().ReverseMap();
         }
     }
 }

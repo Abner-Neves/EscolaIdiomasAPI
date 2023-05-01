@@ -20,11 +20,15 @@ namespace Escola.Infrastructure.Repositories
         public async Task<IEnumerable<Aluno>> GetAlunos()
             => await _context.Set<Aluno>().OrderBy(a => a.Id).ToListAsync();
 
+        public async Task<Aluno> GetAlunoById(int id)
+            => await _context.Set<Aluno>().Where(a => a.Id == id).FirstOrDefaultAsync();
+
         public async Task<Aluno> GetAlunoByCpf(string cpf)
             => await _context.Set<Aluno>().Where(a => a.Cpf == cpf).FirstOrDefaultAsync();
 
         public async Task<Aluno> GetAlunoByCpfForUpdate(string cpf, int id)
             => await _context.Set<Aluno>().Where(a => a.Cpf == cpf && a.Id != id).FirstOrDefaultAsync();
+
         public async Task<Aluno> InsertAluno(Aluno aluno)
         {
             await _context.Set<Aluno>().AddAsync(aluno);

@@ -18,6 +18,8 @@ namespace Escola.Infrastructure.Repositories
             _context = context;
         }
 
+        public async Task<IEnumerable<AlunoTurma>> GetAlunosTurmas()
+            => await _context.Set<AlunoTurma>().OrderBy(t => t.Id).ToListAsync();
         public async Task InsertAlunoTurma(AlunoTurma alunoTurma)
         {
             await _context.Set<AlunoTurma>().AddAsync(alunoTurma);
@@ -31,5 +33,7 @@ namespace Escola.Infrastructure.Repositories
             => await _context.Set<AlunoTurma>().Where(a => a.TurmaId == turmaId).CountAsync() >= 1;
         public async Task<bool> VerificaSeAlunoEmAlgumaTurma(int alunoId)
             => await _context.Set<AlunoTurma>().Where(a => a.AlunoId == alunoId).CountAsync() >= 1;
+        public async Task DeleteAlunoTurma(int id)
+            => await _context.Set<AlunoTurma>().Where(a => a.Id == id).ExecuteDeleteAsync();
     }
 }

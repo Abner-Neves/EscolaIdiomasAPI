@@ -24,7 +24,7 @@ namespace Escola.Infrastructure.Repositories
             => await _context.Set<Turma>().Where(t => t.Id == id).FirstOrDefaultAsync();
 
         public async Task<IEnumerable<Turma>> GetTurmas()
-        => await _context.Set<Turma>().OrderBy(t => t.Id).ToListAsync();
+            => await _context.Set<Turma>().OrderBy(t => t.Id).ToListAsync();
 
         public async Task<Turma> InsertTurma(Turma turma)
         {

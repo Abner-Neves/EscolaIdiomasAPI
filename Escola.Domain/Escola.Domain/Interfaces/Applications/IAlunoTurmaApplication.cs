@@ -12,7 +12,8 @@ namespace Escola.Domain.Interfaces.Applications
 {
     public interface IAlunoTurmaApplication
     {
+        public Task<IEnumerable<GetAlunoTurmaDto>> GetAlunosTurmas();
         public Task<InsertAlunoTurmaDto> InsertAlunoTurma(InsertAlunoTurmaDto alunoTurmaDto);
-        
+        public Task DeleteAlunoTurma(int id);
     }
 }

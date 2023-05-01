@@ -9,7 +9,9 @@ namespace Escola.Domain.Interfaces.Repositories
 {
     public interface IAlunoTurmaRepository
     {
+        public Task <IEnumerable<AlunoTurma>> GetAlunosTurmas();
         public Task InsertAlunoTurma(AlunoTurma alunoTurma);
+        public Task DeleteAlunoTurma(int id);
         public Task<int> QuantidadeNaTurma(int turmaId);
         public Task<bool> VerificaSeAlunoNaTurma(int alunoId, int turmaId);
         public Task<bool> VerificaSeAlunosNaTurma(int turmaId);
