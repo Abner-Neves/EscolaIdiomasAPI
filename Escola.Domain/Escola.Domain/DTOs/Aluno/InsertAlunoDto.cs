@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Escola.Domain.DTOs
+namespace Escola.Domain.DTOs.Aluno
 {
     public class InsertAlunoDto
     {

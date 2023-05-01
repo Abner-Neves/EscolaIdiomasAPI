@@ -1,4 +1,5 @@
-﻿using Escola.Domain.Models;
+﻿using Escola.Domain.DTOs.Turma;
+using Escola.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,10 @@ namespace Escola.Domain.Interfaces.Applications
 {
     public interface ITurmaApplication
     {
-        public Task<IEnumerable<Turma>> GetTurmas();
-        public Task<Turma> GetTurmaById(int id);
-        public Task<Turma> InsertTurma(Turma turma);
-        public Task<Turma> UpdateTurma(Turma turma);
-        public Task<Turma> DeleteTurma(int id);
+        public Task<IEnumerable<GetTurmaDto>> GetTurmas();
+        public Task<GetTurmaDto> GetTurmaById(int id);
+        public Task<GetTurmaDto> InsertTurma(InsertTurmaDto turma);
+        public Task<GetTurmaDto> UpdateTurma(int id, UpdateTurmaDto turma);
+        public Task DeleteTurma(int id);
     }
 }

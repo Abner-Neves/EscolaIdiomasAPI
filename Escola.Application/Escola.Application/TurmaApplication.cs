@@ -1,4 +1,8 @@
-﻿using Escola.Domain.Interfaces.Applications;
+﻿using AutoMapper;
+using Escola.Domain.DTOs;
+using Escola.Domain.DTOs.Turma;
+using Escola.Domain.Interfaces.Applications;
+using Escola.Domain.Interfaces.Repositories;
 using Escola.Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -10,29 +14,58 @@ namespace Escola.Application
 {
     public class TurmaApplication : ITurmaApplication
     {
-        public Task<Turma> DeleteTurma(int id)
+        private readonly ITurmaRepository _turmaRepository;
+        private readonly IAlunoRepository _alunoRepository;
+        private readonly IMapper _mapper;
+
+        public TurmaApplication(ITurmaRepository repository, IAlunoRepository alunoRepository, IMapper mapper)
         {
-            throw new NotImplementedException();
+            _turmaRepository = repository;
+            _alunoRepository = alunoRepository;
+            _mapper = mapper;
+        }
+        public async Task DeleteTurma(int id)
+        {
+            if(await _alunoRepository.VerificaAlunosNaTurma(id))
+                throw new Exception("A turma contém alunos, portanto não pode ser deletada");
+
+            await _turmaRepository.DeleteTurma(id);
         }
 
-        public Task<Turma> GetTurmaById(int id)
+        public async Task<GetTurmaDto> GetTurmaById(int id)
         {
-            throw new NotImplementedException();
+            var turma = await _turmaRepository.GetTurmaById(id);
+            if (turma == null) 
+                throw new Exception("Turma não encontrada"); 
+
+            var turmaDto = _mapper.Map<GetTurmaDto>(turma);
+            return turmaDto;
         }
 
-        public Task<IEnumerable<Turma>> GetTurmas()
+        public async Task<IEnumerable<GetTurmaDto>> GetTurmas()
         {
-            throw new NotImplementedException();
+            var turmas = await _turmaRepository.GetTurmas();
+            var turmasDto = _mapper.Map<IEnumerable<GetTurmaDto>>(turmas);
+            return turmasDto;
         }
 
-        public Task<Turma> InsertTurma(Turma turma)
+        public async Task<GetTurmaDto> InsertTurma(InsertTurmaDto turmaDto)
         {
-            throw new NotImplementedException();
+            var turma = _mapper.Map<Turma>(turmaDto);
+            var result = await _turmaRepository.InsertTurma(turma);
+            return _mapper.Map<GetTurmaDto>(result);
         }
 
-        public Task<Turma> UpdateTurma(Turma turma)
+        public async Task<GetTurmaDto> UpdateTurma(int id, UpdateTurmaDto turmaDto)
         {
-            throw new NotImplementedException();
+            var buscaTurma = await _turmaRepository.GetTurmaById(id);
+            if (buscaTurma == null)
+                throw new Exception("Turma não encontrada");
+
+            var turma = _mapper.Map<Turma>(turmaDto);
+            turma.Id = id;
+            var result = await _turmaRepository.UpdateTurma(turma);
+            return _mapper.Map<GetTurmaDto>(result);
         }
     }
 }

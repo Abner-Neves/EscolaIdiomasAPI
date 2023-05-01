@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
-using Escola.Domain.DTOs;
+using Escola.Domain.DTOs.Aluno;
+using Escola.Domain.DTOs.Turma;
+using Escola.Domain.Interfaces.Applications;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,9 @@ namespace Escola.Domain.Models
         {
             CreateMap<Aluno, GetAlunoDto>().ReverseMap();
             CreateMap<Aluno, InsertAlunoDto>().ReverseMap();
+            CreateMap<Turma, GetTurmaDto>().ReverseMap();
+            CreateMap<Turma, InsertTurmaDto>().ReverseMap();
+            CreateMap<Turma, UpdateTurmaDto>().ReverseMap();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Escola.Domain.DTOs;
+﻿using Escola.Domain.DTOs.Aluno;
 using Escola.Domain.Interfaces.Repositories;
 using Escola.Domain.Models;
 using System;
@@ -18,7 +18,7 @@ namespace Escola.Domain.Interfaces.Applications
         public Task<Aluno> DeleteAluno(int id);
         public bool VerificaCpf(string cpf);
         public bool VerificaEmail(string email);
-        public bool CpfExistente(string cpf);  
+        public Task<bool> CpfExistente(string cpf);
 
     }
 }

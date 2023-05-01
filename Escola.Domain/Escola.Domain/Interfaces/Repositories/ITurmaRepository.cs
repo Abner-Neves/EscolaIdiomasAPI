@@ -13,6 +13,6 @@ namespace Escola.Domain.Interfaces.Repositories
         public Task<Turma> GetTurmaById(int id);
         public Task<Turma> InsertTurma(Turma turma);
         public Task<Turma> UpdateTurma(Turma turma);
-        public Task<Turma> DeleteTurma(int id);
+        public Task DeleteTurma(int id);
     }
 }

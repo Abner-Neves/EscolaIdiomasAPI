@@ -11,8 +11,11 @@ builder.Services.AddDbContext<AppDbContext>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddTransient<IAlunoApplication, AlunoApplication>();
 builder.Services.AddTransient<IAlunoRepository, AlunoRepository>();
+builder.Services.AddTransient<ITurmaApplication, TurmaApplication>();
+builder.Services.AddTransient<ITurmaRepository, TurmaRepository>();
 builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
 var app = builder.Build();

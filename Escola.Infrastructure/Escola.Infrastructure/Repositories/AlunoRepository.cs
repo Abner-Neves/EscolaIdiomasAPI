@@ -47,5 +47,7 @@ namespace Escola.Infrastructure.Repositories
         public async Task<bool> VerificaAlunoNaTurma(string cpf, int turmaId)
             => await _context.Set<Aluno>().Where(a => a.TurmaId == turmaId && a.Cpf == cpf).CountAsync() >= 1;
 
+        public async Task<bool> VerificaAlunosNaTurma(int turmaId)
+            => await _context.Set<Aluno>().Where(a => a.TurmaId == turmaId).CountAsync() >= 1;
     }
 }

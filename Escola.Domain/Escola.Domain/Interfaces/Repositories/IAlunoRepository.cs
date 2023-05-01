@@ -16,5 +16,6 @@ namespace Escola.Domain.Interfaces.Repositories
         public Task<Aluno> DeleteAluno (int id);
         public Task<int> QuantidadeNaTurma(int turmaId);
         public Task<bool> VerificaAlunoNaTurma(string cpf, int turmaId);
+        public Task<bool> VerificaAlunosNaTurma(int turmaId);
     }
 }

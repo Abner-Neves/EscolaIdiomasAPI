@@ -1,5 +1,7 @@
 ﻿using Escola.Domain.Interfaces.Repositories;
 using Escola.Domain.Models;
+using Escola.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,29 +12,36 @@ namespace Escola.Infrastructure.Repositories
 {
     public class TurmaRepository : ITurmaRepository
     {
-        public Task<Turma> DeleteTurma(int id)
+        private readonly AppDbContext _context;
+        public TurmaRepository(AppDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public async Task DeleteTurma(int id)
+            => await _context.Set<Turma>().Where(t=> t.Id == id).ExecuteDeleteAsync();
+
+        public async Task<Turma> GetTurmaById(int id)
+            => await _context.Set<Turma>().Where(t => t.Id == id).FirstOrDefaultAsync();
+
+        public async Task<IEnumerable<Turma>> GetTurmas()
+        => await _context.Set<Turma>().OrderBy(t => t.Id).ToListAsync();
+
+        public async Task<Turma> InsertTurma(Turma turma)
+        {
+            await _context.Set<Turma>().AddAsync(turma);
+            await _context.SaveChangesAsync();
+            return turma;
         }
 
-        public Task<Turma> GetTurmaById(int id)
+        public async Task<Turma> UpdateTurma(Turma turma)
         {
-            throw new NotImplementedException();
-        }
+            var oldTurma = await _context.Set<Turma>().Where(t => t.Id == turma.Id).FirstOrDefaultAsync();
 
-        public Task<IEnumerable<Turma>> GetTurmas()
-        {
-            throw new NotImplementedException();
-        }
+            oldTurma.Numero = turma.Numero;
+            oldTurma.AnoLetivo = turma.AnoLetivo;
 
-        public Task<Turma> InsertTurma(Turma turma)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Turma> UpdateTurma(Turma turma)
-        {
-            throw new NotImplementedException();
+            await _context.SaveChangesAsync();
+            return turma;
         }
     }
 }
