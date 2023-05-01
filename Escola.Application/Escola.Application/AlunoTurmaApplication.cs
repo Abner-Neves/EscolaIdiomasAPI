@@ -56,7 +56,6 @@ namespace Escola.Application
             await _alunoTurmaRepository.InsertAlunoTurma(alunoTurma);
             return alunoTurmaDto;
         }
-
         public async Task DeleteAlunoTurma(int id)
             => await _alunoTurmaRepository.DeleteAlunoTurma(id);
     }

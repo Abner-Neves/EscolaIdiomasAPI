@@ -155,7 +155,6 @@ namespace Escola.Application
             }
             return false;
         }
-
         public bool VerificaEmail(string email)
         {
             if(email.Contains("@") && email.Contains(".com"))

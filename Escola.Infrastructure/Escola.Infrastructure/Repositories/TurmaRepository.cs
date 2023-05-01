@@ -17,9 +17,6 @@ namespace Escola.Infrastructure.Repositories
         {
             _context = context;
         }
-        public async Task DeleteTurma(int id)
-            => await _context.Set<Turma>().Where(t=> t.Id == id).ExecuteDeleteAsync();
-
         public async Task<Turma> GetTurmaById(int id)
             => await _context.Set<Turma>().Where(t => t.Id == id).FirstOrDefaultAsync();
 
@@ -43,5 +40,7 @@ namespace Escola.Infrastructure.Repositories
             await _context.SaveChangesAsync();
             return turma;
         }
+        public async Task DeleteTurma(int id)
+            => await _context.Set<Turma>().Where(t => t.Id == id).ExecuteDeleteAsync();
     }
 }
