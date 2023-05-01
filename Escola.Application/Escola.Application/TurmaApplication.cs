@@ -24,13 +24,6 @@ namespace Escola.Application
             _alunoTurmaRepository = alunoTurmaRepository;
             _mapper = mapper;
         }
-        public async Task DeleteTurma(int id)
-        {
-            if (await _alunoTurmaRepository.VerificaSeAlunosNaTurma(id))
-                throw new Exception("A turma contém alunos, portanto não pode ser deletada");
-
-            await _turmaRepository.DeleteTurma(id);
-        }
 
         public async Task<GetTurmaDto> GetTurmaById(int id)
         {
@@ -66,6 +59,14 @@ namespace Escola.Application
             turma.Id = id;
             var result = await _turmaRepository.UpdateTurma(turma);
             return _mapper.Map<GetTurmaDto>(result);
+        }
+
+        public async Task DeleteTurma(int id)
+        {
+            if (await _alunoTurmaRepository.VerificaSeAlunosNaTurma(id))
+                throw new Exception("A turma contém alunos, portanto não pode ser deletada");
+
+            await _turmaRepository.DeleteTurma(id);
         }
     }
 }

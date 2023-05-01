@@ -22,6 +22,7 @@ namespace Escola.Application
             _alunoTurmaRepository = alunoTurmaRepository;
             _mapper = mapper;
         }
+
         public async Task<IEnumerable<GetAlunoDto>> GetAlunos()
         {
             var alunos = await _alunoRepository.GetAlunos();
@@ -91,6 +92,7 @@ namespace Escola.Application
 
             await _alunoRepository.DeleteAluno(id);
         }
+
         public async Task<bool> VerificaSeTurmaExiste(int turmaId)
         {
             var turma = await _turmaRepository.GetTurmaById(turmaId);
@@ -98,6 +100,7 @@ namespace Escola.Application
                 return false;
             return true;
         }
+
         public async Task<bool> VerificaSeTurmaCheia(int turmaId)
         {
             var quantidadeAlunosTurma = await _alunoTurmaRepository.QuantidadeNaTurma(turmaId);
@@ -106,12 +109,7 @@ namespace Escola.Application
 
             return false;
         }
-        public string FormatarCpf(string cpf)
-        {
-            var cpfFiltrado = cpf.Replace(".", "").Replace("-", "").Replace(",", "").Replace(";", "").Replace(" ", "");
-            return (cpfFiltrado.Insert(3, ".").Insert(7, ".").Insert(11, "-"));
-        }
-        
+
         public async Task<bool> CpfExistente(string cpf)
         {
             cpf = FormatarCpf(cpf);
@@ -130,6 +128,12 @@ namespace Escola.Application
                 return false;
 
             return true;
+        }
+
+        public string FormatarCpf(string cpf)
+        {
+            var cpfFiltrado = cpf.Replace(".", "").Replace("-", "").Replace(",", "").Replace(";", "").Replace(" ", "");
+            return (cpfFiltrado.Insert(3, ".").Insert(7, ".").Insert(11, "-"));
         }
 
         public bool VerificaCpf(string cpf)
@@ -158,6 +162,5 @@ namespace Escola.Application
 
             return false;
         }
-
     }
 }
