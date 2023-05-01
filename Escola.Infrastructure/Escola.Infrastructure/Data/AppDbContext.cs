@@ -16,6 +16,7 @@ namespace Escola.Infrastructure.Data
 
         public DbSet<Aluno> Alunos => Set<Aluno>();
         public DbSet<Turma> Turmas => Set<Turma>();
+        public DbSet<AlunoTurma> AlunosTurmas => Set<AlunoTurma>();
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

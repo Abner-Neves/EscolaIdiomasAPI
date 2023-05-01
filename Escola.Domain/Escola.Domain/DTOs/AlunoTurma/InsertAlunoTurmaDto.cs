@@ -5,15 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Escola.Domain.Models
+namespace Escola.Domain.DTOs.AlunoTurma
 {
-    public class Turma
+    public class InsertAlunoTurmaDto
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
-        public int Numero { get; set; }
+        public int AlunoID { get; set; }
         [Required]
-        public int AnoLetivo { get; set; }
+        public int TurmaId { get; set; }
     }
 }

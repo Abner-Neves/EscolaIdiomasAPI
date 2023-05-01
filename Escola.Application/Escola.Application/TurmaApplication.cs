@@ -15,18 +15,18 @@ namespace Escola.Application
     public class TurmaApplication : ITurmaApplication
     {
         private readonly ITurmaRepository _turmaRepository;
-        private readonly IAlunoRepository _alunoRepository;
+        private readonly IAlunoTurmaRepository _alunoTurmaRepository;
         private readonly IMapper _mapper;
 
-        public TurmaApplication(ITurmaRepository repository, IAlunoRepository alunoRepository, IMapper mapper)
+        public TurmaApplication(ITurmaRepository repository, IAlunoTurmaRepository alunoTurmaRepository, IMapper mapper)
         {
             _turmaRepository = repository;
-            _alunoRepository = alunoRepository;
+            _alunoTurmaRepository = alunoTurmaRepository;
             _mapper = mapper;
         }
         public async Task DeleteTurma(int id)
         {
-            if(await _alunoRepository.VerificaAlunosNaTurma(id))
+            if (await _alunoTurmaRepository.VerificaSeAlunosNaTurma(id))
                 throw new Exception("A turma contém alunos, portanto não pode ser deletada");
 
             await _turmaRepository.DeleteTurma(id);

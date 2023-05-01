@@ -14,11 +14,14 @@ namespace Escola.Domain.Interfaces.Applications
         public Task<IEnumerable<GetAlunoDto>> GetAlunos();
         public Task<GetAlunoDto> GetAlunoByCpf(string cpf);
         public Task<InsertAlunoDto> InsertAluno(InsertAlunoDto aluno);
-        public Task<Aluno> UpdateAluno(Aluno aluno);
-        public Task<Aluno> DeleteAluno(int id);
+        public Task<GetAlunoDto> UpdateAluno(int id, UpdateAlunoDto aluno);
+        public Task DeleteAluno(int id);
         public bool VerificaCpf(string cpf);
         public bool VerificaEmail(string email);
         public Task<bool> CpfExistente(string cpf);
+        public Task<bool> CpfExistente(string cpf, int id);
+        public Task<bool> VerificaSeTurmaExiste(int turmaId);
+        public Task<bool> VerificaSeTurmaCheia(int turmaId);
 
     }
 }

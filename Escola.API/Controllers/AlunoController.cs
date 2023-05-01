@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using Escola.Application;
 using Escola.Domain.DTOs.Aluno;
+using Escola.Domain.DTOs.Turma;
 using Escola.Domain.Interfaces.Applications;
 using Escola.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -43,6 +45,34 @@ namespace Escola.API.Controllers
             try
             {
                 await _alunoApplication.InsertAluno(aluno);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateAluno(int id, [FromBody] UpdateAlunoDto aluno)
+        {
+            try
+            {
+                var result = await _alunoApplication.UpdateAluno(id, aluno);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAluno(int id)
+        {
+            try
+            {
+                await _alunoApplication.DeleteAluno(id);
                 return Ok();
             }
             catch (Exception ex)

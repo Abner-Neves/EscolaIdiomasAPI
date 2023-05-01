@@ -19,9 +19,6 @@ namespace Escola.Domain.Models
         public string Cpf { get; set; }
         [Required]
         public string Email { get; set; }
-
-        [ForeignKey("Turma")]
-        public int TurmaId { get; set; }
-        public Turma? Turma { get; set; }
+        
     }
 }
