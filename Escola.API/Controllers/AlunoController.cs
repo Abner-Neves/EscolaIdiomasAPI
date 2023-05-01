@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Escola.Domain.DTOs;
+using Escola.Domain.DTOs.Aluno;
 using Escola.Domain.Interfaces.Applications;
 using Escola.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +11,7 @@ namespace Escola.API.Controllers
     public class AlunoController : ControllerBase
     {
         private readonly IAlunoApplication _alunoApplication;
-        public AlunoController(IAlunoApplication alunoApplication, IMapper mapper)
+        public AlunoController(IAlunoApplication alunoApplication)
         {
             _alunoApplication = alunoApplication;
         }

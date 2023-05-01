@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Escola.Domain.DTOs;
+using Escola.Domain.DTOs.Aluno;
 using Escola.Domain.Interfaces.Applications;
 using Escola.Domain.Interfaces.Repositories;
 using Escola.Domain.Models;
@@ -49,7 +49,7 @@ namespace Escola.Application
             if (await _repository.QuantidadeNaTurma(alunoDto.TurmaId) >= 5)
                 throw new Exception("Turma cheia");
 
-            if (CpfExistente(alunoDto.Cpf))
+            if (await CpfExistente(alunoDto.Cpf))
                 throw new Exception("CPF informado já existe");
 
             if (await _repository.VerificaAlunoNaTurma(alunoDto.Cpf, alunoDto.TurmaId))
@@ -72,14 +72,15 @@ namespace Escola.Application
         }
         public string FormatarCpf(string cpf)
         {
-            var cpfFiltrado = cpf.Replace(".", "").Replace("-", "").Replace(",", "").Replace(" ", "");
+            var cpfFiltrado = cpf.Replace(".", "").Replace("-", "").Replace(",", "").Replace(";", "").Replace(" ", "");
             return (cpfFiltrado.Insert(3, ".").Insert(7, ".").Insert(11, "-"));
         }
 
-        public bool CpfExistente(string cpf)
+        public async Task<bool> CpfExistente(string cpf)
         {
-            var aluno = _repository.GetAlunoByCpf(cpf);
-            if (aluno.Id > 0)
+            cpf = FormatarCpf(cpf);
+            var aluno = await _repository.GetAlunoByCpf(cpf);
+            if (aluno is null)
                 return false;
 
             return true;
@@ -87,7 +88,7 @@ namespace Escola.Application
 
         public bool VerificaCpf(string cpf)
         {
-            var cpfFiltrado = cpf.Replace(".", "").Replace("-", "").Replace(",", "").Replace(" ", "");
+            var cpfFiltrado = cpf.Replace(".", "").Replace("-", "").Replace(",", "").Replace(";", "").Replace(" ", "");
             
             if(cpfFiltrado.Length == 11)
             {
